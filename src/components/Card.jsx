@@ -8,7 +8,7 @@ function Card(){
     const [searchKeyword,setSearchKeyword]=useState("");
 
 useEffect(() => {
-    fetch('http://127.0.0.1:5000/articles')
+    fetch('/api/articles')
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -19,17 +19,7 @@ useEffect(() => {
         });
 }, []);
 
-    // useEffect(()=>{
-    //     if(filter==="All"){
-    //         setFilteredArticles(articles);
-    //     }
-    //     else if (filter === "By Id") {
-    //         setFilteredArticles(articles.filter(article => article.ID));
-    //     }
-    //     else if(filter ==="By Keyword"){
-    //         setFilteredArticles(articles.filter(articles=> articles.Title.toLowerCase().includes("sports")))
-    //     }
-    // },[filter,articles])
+
 
     useEffect(() => {
         let updatedArticles = articles;
