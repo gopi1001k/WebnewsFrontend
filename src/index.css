@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body ,html{
+    @apply bg-slate-100;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
